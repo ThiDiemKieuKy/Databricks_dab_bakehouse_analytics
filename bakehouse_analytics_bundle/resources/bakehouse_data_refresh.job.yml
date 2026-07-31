@@ -27,10 +27,16 @@ resources:
         - name: schema
           default: ${var.schema}
 
-      tasks:
-        - task_key: notebook_task
+      tasks:        
+        - task_key: customers_360
           notebook_task:
             notebook_path: bakehouse_analytics_bundle/src/customer_360
+            source: GIT
+        - task_key: transactions_summary
+          depends_on:
+            - task_key: customers_360
+          notebook_task:
+            notebook_path: bakehouse_analytics_bundle/src/transaction_summary
             source: GIT
 
       environments:
