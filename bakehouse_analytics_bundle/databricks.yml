@@ -13,6 +13,8 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  branch:
+    description: GitHub branch name
 
 targets:
   dev:
@@ -27,6 +29,7 @@ targets:
     variables:
       catalog: bakehouse_analytics_dev
       schema: rnd
+      branch: dev
   prod:
     mode: production
     workspace:
@@ -36,6 +39,7 @@ targets:
     variables:
       catalog: bakehouse_analytics_prod
       schema: rnd
+      branch: main
     permissions:
       - user_name: thidiemkieu.ky@gmail.com
         level: CAN_MANAGE
