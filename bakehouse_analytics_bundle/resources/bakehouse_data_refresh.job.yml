@@ -32,6 +32,10 @@ resources:
           notebook_task:
             notebook_path: bakehouse_analytics_bundle/src/customer_360
             source: GIT
+        - task_key: notebook_task
+          notebook_task:
+            notebook_path: bakehouse_analytics_bundle/src/transaction_summary
+            source: GIT
 
       environments:
         - environment_key: default
