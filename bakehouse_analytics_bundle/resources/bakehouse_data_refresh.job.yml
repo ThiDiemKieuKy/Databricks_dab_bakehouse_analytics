@@ -30,7 +30,7 @@ resources:
       tasks:
         - task_key: notebook_task
           notebook_task:
-            notebook_path: bakehouse_analytics_bundle/src/customer_360.ipynb
+            notebook_path: bakehouse_analytics_bundle/src/customer_360
             source: GIT
 
       environments:
